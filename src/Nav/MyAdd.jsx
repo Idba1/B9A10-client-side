@@ -1,32 +1,9 @@
+import SmallCarosel from "../Pages/SmallCarosel";
 
 const MyAdd = () => {
     return (
         <div>
-
-
-            <div className="carousel rounded-box">
-                <div className="carousel-item">
-                    <img className="h-72 w-72" src="/public/netherland6.jpg" alt="Burger" />
-                </div>
-                <div className="carousel-item">
-                    <img className="h-72 w-72" src="/public/France.jpg" alt="Burger" />
-                </div>
-                <div className="carousel-item">
-                    <img className="h-72 w-72" src="/public/Italy12.jpg" alt="Burger" />
-                </div>
-                <div className="carousel-item">
-                    <img className="h-72 w-72" src="/public/Switzerland.jpg" alt="Burger" />
-                </div>
-                <div className="carousel-item">
-                    <img className="h-72 w-72" src="/public/Italy9.jpg" alt="Burger" />
-                </div>
-                <div className="carousel-item">
-                    <img className="h-72 w-72" src="/public/flower9.jpg" alt="Burger" />
-                </div>
-                <div className="carousel-item">
-                    <img className="h-72 w-72" src="/public/england1.jpg" alt="Burger" />
-                </div>
-            </div>
+            <SmallCarosel></SmallCarosel>
 
             <div className="text-center mb-10 mt-8 lg:mt-12 p-5">
                 <h1 className="text-2xl  text-sky-950 font-bold mt-2">Touch With Euro Journey</h1>
