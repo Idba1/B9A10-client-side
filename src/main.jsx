@@ -7,6 +7,17 @@ import {
 import './index.css'
 import Navbar from './Components/Navbar';
 import Countries from './Components/Countries';
+import Spain from './Countries/Spain';
+import France from './Countries/France';
+import Italy from './Countries/Italy';
+import Netherlands from './Countries/Netherlands';
+import England from './Countries/England';
+import Switzerland from './Countries/Switzerland';
+import AboutUs from './Pages/AboutUs';
+import Contact from './Pages/Contact';
+import ComingSoon from './Pages/ComingSoon';
+import Queastion from './Pages/Queastion';
+import OurTeam from './Pages/OurTeam';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +26,50 @@ const router = createBrowserRouter([
   {
     path: "/buy",
     element: <Countries></Countries>,
+  },
+  {
+    path: "/spain",
+    element: <Spain></Spain>,
+  },
+  {
+    path: "/france",
+    element: <France></France>,
+  },
+  {
+    path: "/italy",
+    element: <Italy></Italy>,
+  },
+  {
+    path: "/netherlands",
+    element: <Netherlands></Netherlands>,
+  },
+  {
+    path: "/england",
+    element: <England></England>,
+  },
+  {
+    path: "/swizerland",
+    element: <Switzerland></Switzerland>,
+  },
+  {
+    path: "/ourteam",
+    element: <OurTeam></OurTeam>,
+  },
+  {
+    path: "/comingsoon",
+    element: <ComingSoon></ComingSoon>,
+  },
+  {
+    path: "/about",
+    element: <AboutUs></AboutUs>,
+  },
+  {
+    path: "/f&Q",
+    element: <Queastion></Queastion>,
+  },
+  {
+    path: "/contact",
+    element: <Contact></Contact>,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

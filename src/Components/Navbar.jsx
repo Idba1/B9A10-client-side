@@ -35,18 +35,18 @@ const Navbar = () => {
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F] menu-title'} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>COUNTRIES</span>
                                 <ul className={`menu ${countriesHover ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury1"}>France</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/france"}>France</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury2"}>Italy</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/italy"}>Italy</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury3"}>Spain</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/spain"}>Spain</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury4"}>England</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/england"}>England</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury5"}>Netherlands
+                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/netherlands"}>Netherlands
                                     </NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury5"}>Switzerland
+                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/swizerland"}>Switzerland
                                     </NavLink></li>
                                 </ul>
                             </li>
@@ -87,18 +87,18 @@ const Navbar = () => {
                             <span className="menu-title text-black">COUNTRIES</span>
                             <ul className={`menu ${countriesHover ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury1"}>France</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/france"}>France</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury2"}>Italy</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/italy"}>Italy</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury3"}>Spain</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/spain"}>Spain</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury4"}>England</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/england"}>England</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury5"}>Netherlands
+                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/netherlands"}>Netherlands
                                 </NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/luxury5"}>Switzerland
+                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/swizerland"}>Switzerland
                                 </NavLink></li>
                             </ul>
                         </li>
