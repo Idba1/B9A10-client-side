@@ -6,25 +6,25 @@ const MyAdd = () => {
 
             <div className="carousel rounded-box">
                 <div className="carousel-item">
-                    <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Burger" />
+                    <img className="h-72 w-72" src="/public/netherland6.jpg" alt="Burger" />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Burger" />
+                    <img className="h-72 w-72" src="/public/France.jpg" alt="Burger" />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Burger" />
+                    <img className="h-72 w-72" src="/public/Italy12.jpg" alt="Burger" />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" alt="Burger" />
+                    <img className="h-72 w-72" src="/public/Switzerland.jpg" alt="Burger" />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" alt="Burger" />
+                    <img className="h-72 w-72" src="/public/Italy9.jpg" alt="Burger" />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" alt="Burger" />
+                    <img className="h-72 w-72" src="/public/flower9.jpg" alt="Burger" />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Burger" />
+                    <img className="h-72 w-72" src="/public/england1.jpg" alt="Burger" />
                 </div>
             </div>
 
