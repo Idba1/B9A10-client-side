@@ -107,7 +107,7 @@ const Navbar = () => {
                             to={"/"}>HOME</NavLink>
                         <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                             <NavLink to={"/countries"} className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'}>COUNTRIES</NavLink>
+                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F] menu-title'} >COUNTRIES</NavLink>
                             <ul className={`menu ${countriesHover ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <li><NavLink className={({ isActive }) =>
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/france"}>France</NavLink></li>
