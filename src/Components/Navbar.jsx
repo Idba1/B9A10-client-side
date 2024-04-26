@@ -91,7 +91,7 @@ const Navbar = () => {
                                         isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/aboutus"}>ABOUT US</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
                                         isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/contact"}>CONTACT</NavLink></li>
-                                    
+
                                 </ul>
                             </li>
                         </ul>
@@ -104,7 +104,8 @@ const Navbar = () => {
                             isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'}
                             to={"/"}>HOME</NavLink>
                         <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <span className="menu-title text-black">COUNTRIES</span>
+                            <NavLink to={"/countries"} className={({ isActive }) =>
+                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'}>COUNTRIES</NavLink>
                             <ul className={`menu ${countriesHover ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <li><NavLink className={({ isActive }) =>
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/france"}>France</NavLink></li>
@@ -129,8 +130,8 @@ const Navbar = () => {
                         <NavLink className={({ isActive }) =>
                             isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/myadd"}>MY ADD</NavLink>
                         <li className="dropdown">
-                            <span tabIndex={0} className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F] menu-title'} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>PAGES</span>
+                            <NavLink to={"/page"} tabIndex={0} className={({ isActive }) =>
+                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F] menu-title'} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>PAGES</NavLink>
                             <ul className={`menu ${pages ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>
                                 <li><NavLink className={({ isActive }) =>
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/ourteam"}>OUR TEAM</NavLink></li>
@@ -142,7 +143,7 @@ const Navbar = () => {
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/aboutus"}>ABOUT US</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/contact"}>CONTACT</NavLink></li>
-                                
+
                             </ul>
                         </li>
                     </ul>

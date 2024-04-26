@@ -26,6 +26,7 @@ import AddSpot from './Nav/AddSpot';
 import MyAdd from './Nav/MyAdd';
 import Register from './Components/Register';
 import LogIn from './Components/LogIn';
+import Page from './Nav/Page';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,11 +34,11 @@ const router = createBrowserRouter([
     errorElement: <NotFound></NotFound>,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home></Home>,
       },
       {
-        path: "/buy",
+        path: "/countries",
         element: <Countries></Countries>,
       },
       {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
       {
         path: "/myadd",
         element: <MyAdd></MyAdd>,
+      },
+      {
+        path: "/page",
+        element: <Page></Page>,
       },
       {
         path: "/ourteam",
