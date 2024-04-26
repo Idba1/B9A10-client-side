@@ -5,10 +5,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import Navbar from './Components/Navbar';
+import Countries from './Components/Countries';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Navbar></Navbar>,
+  },
+  {
+    path: "/buy",
+    element: <Countries></Countries>,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
