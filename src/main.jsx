@@ -21,6 +21,11 @@ import OurTeam from './Pages/OurTeam';
 import Home from './Components/Home';
 import Root from './Components/Root/Root';
 import NotFound from './Pages/NotFound';
+import AllTouristSpot from './Nav/AllTouristSpot';
+import AddSpot from './Nav/AddSpot';
+import MyAdd from './Nav/MyAdd';
+import Register from './Components/Register';
+import LogIn from './Components/LogIn';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -60,6 +65,18 @@ const router = createBrowserRouter([
         element: <Switzerland></Switzerland>,
       },
       {
+        path: "/alltouristspot",
+        element: <AllTouristSpot></AllTouristSpot>,
+      },
+      {
+        path: "/addspot",
+        element: <AddSpot></AddSpot>,
+      },
+      {
+        path: "/myadd",
+        element: <MyAdd></MyAdd>,
+      },
+      {
         path: "/ourteam",
         element: <OurTeam></OurTeam>,
       },
@@ -78,6 +95,14 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <LogIn></LogIn>,
       },
     ]
   },

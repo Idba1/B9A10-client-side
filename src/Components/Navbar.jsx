@@ -91,8 +91,7 @@ const Navbar = () => {
                                         isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/aboutus"}>ABOUT US</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
                                         isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/contact"}>CONTACT</NavLink></li>
-                                    <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/pagenotfound"}>404 PAGES</NavLink></li>
+                                    
                                 </ul>
                             </li>
                         </ul>
@@ -143,8 +142,7 @@ const Navbar = () => {
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/aboutus"}>ABOUT US</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/contact"}>CONTACT</NavLink></li>
-                                <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/pagenotfound"}>404 PAGES</NavLink></li>
+                                
                             </ul>
                         </li>
                     </ul>
