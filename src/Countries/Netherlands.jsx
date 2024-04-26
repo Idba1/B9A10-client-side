@@ -11,7 +11,7 @@ const Netherlands = () => {
                         <img className="object-cover w-full dark:bg-gray-500 aspect-square" src="/public/netherland3.jpg" />
                         <img className="object-cover w-full dark:bg-gray-500 aspect-square" src="/public/netherland5.jpg" />
                     </div>
-                    <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2 mt-4">
                         <img className="object-cover w-full dark:bg-gray-500 aspect-square" src="/public/netherland6.jpg" />
                         <img className="object-cover w-full dark:bg-gray-500 aspect-square" src="/public/netherland7.jpg" />
                         <img className="object-cover w-full dark:bg-gray-500 aspect-square" src="/public/netherland8.jpg" />
