@@ -91,6 +91,8 @@ const Navbar = () => {
                                         isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/aboutus"}>ABOUT US</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
                                         isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/contact"}>CONTACT</NavLink></li>
+                                    <li><NavLink className={({ isActive }) =>
+                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/ticket"}>Ticket</NavLink></li>
 
                                 </ul>
                             </li>
@@ -143,6 +145,8 @@ const Navbar = () => {
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/aboutus"}>ABOUT US</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
                                     isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/contact"}>CONTACT</NavLink></li>
+                                <li><NavLink className={({ isActive }) =>
+                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/ticket"}>Ticket</NavLink></li>
 
                             </ul>
                         </li>

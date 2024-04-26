@@ -27,6 +27,7 @@ import MyAdd from './Nav/MyAdd';
 import Register from './Components/Register';
 import LogIn from './Components/LogIn';
 import Page from './Nav/Page';
+import Ticket from './Pages/Ticket';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/ticket",
+        element: <Ticket></Ticket>,
       },
       {
         path: "/register",
