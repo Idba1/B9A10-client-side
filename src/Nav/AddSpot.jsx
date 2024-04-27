@@ -17,8 +17,24 @@ const AddSpot = () => {
         const totaVisitorsPerYear = form.totaVisitorsPerYear.value;
         const email = form.email.value;
         const name = form.name.value;
+
 		const addSpot = {image, tourists_spot_name, country_Name, location, short_description , average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name};
+
 		console.log(addSpot);
+
+		// Send Data
+		fetch('http://localhost:5173/addspot', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addSpot)
+        })
+		.then(res => res.json())
+		.then(data => {
+			console.log(data);
+		})
+
 	}
 
 
