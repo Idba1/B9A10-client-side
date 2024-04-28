@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import SmallCarosel from "../Pages/SmallCarosel";
 
 const AddSpot = () => {
@@ -6,34 +7,42 @@ const AddSpot = () => {
 		event.preventDefault();
 		const form = event.target;
 
-        const image = form.image.value;
-        const tourists_spot_name = form.tourists_spot_name.value;
-        const country_Name = form.country_Name.value;
-        const location = form.location.value;
-        const short_description = form.short_description.value;
-        const average_cost = form.average_cost.value;
-        const seasonality = form.seasonality.value;
-        const travel_time = form.travel_time.value;
-        const totaVisitorsPerYear = form.totaVisitorsPerYear.value;
-        const email = form.email.value;
-        const name = form.name.value;
+		const image = form.image.value;
+		const tourists_spot_name = form.tourists_spot_name.value;
+		const country_Name = form.country_Name.value;
+		const location = form.location.value;
+		const short_description = form.short_description.value;
+		const average_cost = form.average_cost.value;
+		const seasonality = form.seasonality.value;
+		const travel_time = form.travel_time.value;
+		const totaVisitorsPerYear = form.totaVisitorsPerYear.value;
+		const email = form.email.value;
+		const name = form.name.value;
 
-		const addSpot = {image, tourists_spot_name, country_Name, location, short_description , average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name};
+		const addSpot = { image, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name };
 
 		console.log(addSpot);
 
 		// Send Data
 		fetch('http://localhost:5000/addspot', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(addSpot)
-        })
-		.then(res => res.json())
-		.then(data => {
-			console.log(data);
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify(addSpot)
 		})
+			.then(res => res.json())
+			.then(data => {
+				console.log(data);
+				if (data.insertedId) {
+					Swal.fire({
+						title: 'Success!',
+						text: 'Coffee Added Successfully',
+						icon: 'success',
+						confirmButtonText: 'Cool'
+					})
+				}
+			})
 
 	}
 
