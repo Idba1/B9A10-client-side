@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 import PropTypes from 'prop-types'
 import { createContext, useEffect, useState } from 'react';
 import auth from '../Firebase/Firebase.init';
@@ -16,6 +16,11 @@ const AuthProvider = ({ children }) => {
     };
 
 
+      // sign in user
+      const signInUser = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    };
+
     // ovserver
     useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -27,7 +32,7 @@ const AuthProvider = ({ children }) => {
 
 
     const allvalues = {
-        createUser
+        createUser,signInUser
 
     };
 
