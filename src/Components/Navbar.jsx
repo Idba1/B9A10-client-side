@@ -50,103 +50,103 @@ const Navbar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <NavLink className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/"}>Home</NavLink>
+                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/"}>Home</NavLink>
                             <li className="dropdown">
                                 <span tabIndex={0} className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F] menu-title'} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>COUNTRIES</span>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white menu-title'} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>COUNTRIES</span>
                                 <ul className={`menu ${countriesHover ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/france"}>France</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/france"}>France</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/italy"}>Italy</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/italy"}>Italy</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/spain"}>Spain</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/spain"}>Spain</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/england"}>England</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/england"}>England</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/netherlands"}>Netherlands
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/netherlands"}>Netherlands
                                     </NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/swizerland"}>Switzerland
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/swizerland"}>Switzerland
                                     </NavLink></li>
                                 </ul>
                             </li>
                             <NavLink className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
+                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
                             <NavLink className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/addspot"}>ADD SPOT</NavLink>
+                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/addspot"}>ADD SPOT</NavLink>
                             <NavLink className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/myadd"}>MY ADD</NavLink>
+                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/myadd"}>MY ADD</NavLink>
                             <li className="dropdown">
                                 <span tabIndex={0} className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F] menu-title'} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>PAGES</span>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white menu-title'} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>PAGES</span>
                                 <ul className={`menu ${pages ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/ourteam"}>OUR TEAM</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/ourteam"}>OUR TEAM</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/f&Q"}>F&Q</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/f&Q"}>F&Q</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/comingsoon"}>COMING SOON</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/comingsoon"}>COMING SOON</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/aboutus"}>ABOUT US</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/aboutus"}>ABOUT US</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/contact"}>CONTACT</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/contact"}>CONTACT</NavLink></li>
                                     <li><NavLink className={({ isActive }) =>
-                                        isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/ticket"}>Ticket</NavLink></li>
+                                        isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/ticket"}>Ticket</NavLink></li>
 
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-[#0E46A3] font-bold lg:text-2xl">Euro Journey</a>
+                    <a className="btn btn-ghost text-[#0E46A3] font-bold lg:text-2xl dark:text-sky-400">Euro Journey</a>
                 </div>
                 <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal px-1 gap-7 font-semibold text-lg">
                         <NavLink className={({ isActive }) =>
-                            isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'}
+                            isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'}
                             to={"/"}>HOME</NavLink>
                         <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                             <NavLink to={"/countries"} className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F] menu-title'} >COUNTRIES</NavLink>
+                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white menu-title'} >COUNTRIES</NavLink>
                             <ul className={`menu ${countriesHover ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/france"}>France</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/france"}>France</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/italy"}>Italy</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/italy"}>Italy</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/spain"}>Spain</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/spain"}>Spain</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/england"}>England</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/england"}>England</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/netherlands"}>Netherlands
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/netherlands"}>Netherlands
                                 </NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/swizerland"}>Switzerland
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/swizerland"}>Switzerland
                                 </NavLink></li>
                             </ul>
                         </li>
                         <NavLink className={({ isActive }) =>
-                            isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
+                            isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
                         <NavLink className={({ isActive }) =>
-                            isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/addspot"}>ADD SPOT</NavLink>
+                            isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/addspot"}>ADD SPOT</NavLink>
                         <NavLink className={({ isActive }) =>
-                            isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/myadd"}>MY ADD</NavLink>
+                            isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/myadd"}>MY ADD</NavLink>
                         <li className="dropdown">
                             <NavLink to={"/page"} tabIndex={0} className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : 'text-[#004A7F] menu-title'} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>PAGES</NavLink>
+                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white menu-title'} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>PAGES</NavLink>
                             <ul className={`menu ${pages ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/ourteam"}>OUR TEAM</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/ourteam"}>OUR TEAM</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/f&Q"}>F&Q</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/f&Q"}>F&Q</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/comingsoon"}>COMING SOON</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/comingsoon"}>COMING SOON</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/aboutus"}>ABOUT US</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/aboutus"}>ABOUT US</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/contact"}>CONTACT</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/contact"}>CONTACT</NavLink></li>
                                 <li><NavLink className={({ isActive }) =>
-                                    isActive ? 'text-[#FFD700]' : 'text-[#004A7F]'} to={"/ticket"}>Ticket</NavLink></li>
+                                    isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/ticket"}>Ticket</NavLink></li>
 
                             </ul>
                         </li>

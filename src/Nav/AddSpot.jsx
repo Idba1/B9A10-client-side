@@ -23,7 +23,7 @@ const AddSpot = () => {
 		console.log(addSpot);
 
 		// Send Data
-		fetch('http://localhost:5173/addspot', {
+		fetch('http://localhost:5000/addspot', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
