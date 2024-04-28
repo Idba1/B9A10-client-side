@@ -2,19 +2,19 @@ import { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-    const [countriesHover, setCountriesHover] = useState(false);
+    // const [countriesHover, setCountriesHover] = useState(false);
     const [pages, setpages] = useState(false);
 
-    const handleMouseEnter = () => {
-        setCountriesHover(true);
-    };
+    // const handleMouseEnter = () => {
+    //     setCountriesHover(true);
+    // };
     const handleMousePagesEnter = () => {
         setpages(true);
     };
 
-    const handleMouseLeave = () => {
-        setCountriesHover(false);
-    };
+    // const handleMouseLeave = () => {
+    //     setCountriesHover(false);
+    // };
     const handleMousePagesLeave = () => {
         setpages(false);
     };
@@ -51,7 +51,7 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <NavLink className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/"}>Home</NavLink>
-                            <li className="dropdown">
+                            {/* <li className="dropdown">
                                 <span tabIndex={0} className={({ isActive }) =>
                                     isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white menu-title'} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>COUNTRIES</span>
                                 <ul className={`menu ${countriesHover ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -70,7 +70,7 @@ const Navbar = () => {
                                         isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/swizerland"}>Switzerland
                                     </NavLink></li>
                                 </ul>
-                            </li>
+                            </li> */}
                             <NavLink className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
                             <NavLink className={({ isActive }) =>
@@ -105,7 +105,7 @@ const Navbar = () => {
                         <NavLink className={({ isActive }) =>
                             isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'}
                             to={"/"}>HOME</NavLink>
-                        <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        {/* <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                             <NavLink to={"/countries"} className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white menu-title'} >COUNTRIES</NavLink>
                             <ul className={`menu ${countriesHover ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -124,7 +124,7 @@ const Navbar = () => {
                                     isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/swizerland"}>Switzerland
                                 </NavLink></li>
                             </ul>
-                        </li>
+                        </li> */}
                         <NavLink className={({ isActive }) =>
                             isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
                         <NavLink className={({ isActive }) =>

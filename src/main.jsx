@@ -28,7 +28,6 @@ import Register from './Components/Register';
 import LogIn from './Components/LogIn';
 import Page from './Nav/Page';
 import Ticket from './Pages/Ticket';
-import AddSpotCard from './Cared/AddSpotCard';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -69,16 +68,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/alltouristspot",
+        loader: () => fetch('http://localhost:5000/addspot'),
         element: <AllTouristSpot></AllTouristSpot>,
       },
       {
-        path: "/spot",
-        element: <AddSpot></AddSpot>,
-      },
-      {
         path: "/addspot",
-        loader: () => fetch('http://localhost:5000/addspot'),
-        element: <AddSpotCard></AddSpotCard>,
+        element: <AddSpot></AddSpot>,
       },
       {
         path: "/myadd",
