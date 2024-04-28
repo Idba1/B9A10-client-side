@@ -88,7 +88,7 @@ const router = createBrowserRouter([
         element: <AddSpot></AddSpot>,
       },
       {
-        path: `viewdetails`,
+        path: `allviewdetails`,
         element: <SpotViewDetails></SpotViewDetails>,
       },
       {
