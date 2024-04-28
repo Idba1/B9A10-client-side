@@ -30,6 +30,7 @@ import Page from './Nav/Page';
 import Ticket from './Pages/Ticket';
 import SpotViewDetails from './Cared/SpotViewDetails';
 import AddTouristSpotSection from './Pages/AddTouristSpotSection';
+import TouristSpotSection from './Nav/TouristSpotSection';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,7 +43,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/alltouristspotsection",
-        element: <AddTouristSpotSection></AddTouristSpotSection>
+        element: <AddTouristSpotSection></AddTouristSpotSection>,
+      },
+      {
+        path: "/touristspotsection",
+        loader: () => fetch('http://localhost:5000/alltouristspotsection'),
+        element: <TouristSpotSection></TouristSpotSection>,
       },
       {
         path: "/countries",
