@@ -1,19 +1,33 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import PropTypes from 'prop-types'
-import { createContext } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import auth from '../Firebase/Firebase.init';
 export const AuthContext = createContext(null)
 
 
 const AuthProvider = ({ children }) => {
 
-      // create user
-      const createUser = (email, password) => {
+    const [user, setUser] = useState(null);
+    console.log(user);
+
+    // create user
+    const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
 
-    const allvalues = { createUser
+    // ovserver
+    useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user);
+            }
+        });
+    }, []);
+
+
+    const allvalues = {
+        createUser
 
     };
 
