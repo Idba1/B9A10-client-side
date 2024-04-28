@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const AddSpotCardDesign = ({spot}) => {
     const { _id, image, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name } = spot;
@@ -10,7 +11,7 @@ const AddSpotCardDesign = ({spot}) => {
                     <h2 className="card-title">  {tourists_spot_name} </h2>
                     <p> {short_description} </p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Watch</button>
+                        <Link to={`/viewdetails`} className="btn btn-primary">View Details</Link>
                     </div>
                 </div>
             </div>

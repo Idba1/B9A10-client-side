@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import AddSpotCardDesign from "../Cared/AddSpotCardDesign";
 
 
@@ -20,6 +20,7 @@ const AllTouristSpot = () => {
                     ></AddSpotCardDesign>)
                 }
             </div>
+            <Link className="btn" to={'/addspot'} >Add a New Spot</Link>
         </div>
     );
 };

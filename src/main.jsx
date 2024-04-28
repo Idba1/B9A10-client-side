@@ -28,6 +28,7 @@ import Register from './Components/Register';
 import LogIn from './Components/LogIn';
 import Page from './Nav/Page';
 import Ticket from './Pages/Ticket';
+import SpotViewDetails from './Cared/SpotViewDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
       {
         path: "/addspot",
         element: <AddSpot></AddSpot>,
+      },
+      {
+        path: `viewdetails`,
+        element: <SpotViewDetails></SpotViewDetails>,
       },
       {
         path: "/myadd",
