@@ -153,8 +153,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-1 lg:gap-3 md:gap-3">
-                    <NavLink className="btn font-light text-xs p-1 my-0 py-0  text-white  lg:font-bold bg-[#0E46A3]" to={"/register"}>Register</NavLink>
-                    <NavLink className="btn font-light text-xs p-1 my-0 py-0 text-white  lg:font-bold bg-[#0E46A3]" to={"/login"}>LogIn</NavLink>
+                    <NavLink className="btn font-light text-xs p-1 lg:p-4 my-0 py-0  text-white  lg:font-bold lg:text-sm  bg-[#0E46A3]" to={"/register"}>Register</NavLink>
+                    <NavLink className="btn font-light text-xs p-1 lg:p-4 my-0 py-0 text-white  lg:font-bold  lg:text-sm bg-[#0E46A3]" to={"/login"}>LogIn</NavLink>
                 </div>
                 <label className="cursor-pointer grid place-items-center">
                     <input type="checkbox" onChange={handleTheme} value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />

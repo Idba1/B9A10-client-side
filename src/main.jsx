@@ -31,6 +31,7 @@ import Ticket from './Pages/Ticket';
 import SpotViewDetails from './Cared/SpotViewDetails';
 import AddTouristSpotSection from './Pages/AddTouristSpotSection';
 import TouristSpotSection from './Nav/TouristSpotSection';
+import AuthProvider from './Components/AuthProvider';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -136,6 +137,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
