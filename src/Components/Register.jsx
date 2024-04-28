@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Register = () => {
@@ -12,9 +13,32 @@ const Register = () => {
         formState: { errors },
     } = useForm();
 
+    const validatePassword = (password) => {
+        if (password.length < 6) {
+            toast.error('Password must contain at least 6 character');
+            return ;
+
+        }
+        if (!/[A-Z]/.test(password)) {
+            toast.error('Password must contain at least one uppercase letter');
+            return ;
+        }
+        if (!/[a-z]/.test(password)) {
+            toast.error('Password must contain at least one lowercase letter');
+            return;
+        }
+        return true;
+    };
+
     const onSubmit = (data) => {
         const { email, password, image, fullName } = data;
 
+
+        const passwordValidation = validatePassword(password);
+        if (passwordValidation !== true) {
+            console.log(passwordValidation);
+            return;
+        }
 
         createUser(email, password)
             .then((result) => {
@@ -66,6 +90,7 @@ const Register = () => {
                         )}
             </div>
             <button className="block w-full p-3 text-center  dark:text-black font-semibold rounded-md dark:bg-[#9AC8CD]">Register
+            <Toaster></Toaster>
             </button>
         </form>
         <div className="flex items-center pt-4 space-x-1">
