@@ -2,35 +2,42 @@
 
 const Register = () => {
     return (
-        <div className="flex flex-col  p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">
-            <div className="mb-8 text-center">
-                <h1 className="my-3 text-4xl font-bold">Sign in</h1>
-                <p className="text-sm dark:text-gray-600">Sign in to access your account</p>
+        <div className="w-full max-w-md mx-auto my-12 p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
+        <h1 className="text-2xl font-bold text-center">Register</h1>
+        <form  noValidate="" action="" className="space-y-6">
+            <div className="space-y-1 text-sm">
+                <label htmlFor="username" className="block dark:text-gray-600">Name</label>
+                <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-sky-950"
+                 />
+                
             </div>
-            <form noValidate="" action="" className="space-y-12">
-                <div className="space-y-4">
-                    <div>
-                        <label htmlFor="email" className="block mb-2 text-sm">Email address</label>
-                        <input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
-                    </div>
-                    <div>
-                        <div className="flex justify-between mb-2">
-                            <label htmlFor="password" className="text-sm">Password</label>
-                            <a rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-gray-600">Forgot password?</a>
-                        </div>
-                        <input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
-                    </div>
-                </div>
-                <div className="space-y-2">
-                    <div>
-                        <button type="button" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">Sign in</button>
-                    </div>
-                    <p className="px-6 text-sm text-center dark:text-gray-600">Don't have an account yet?
-                        <a rel="noopener noreferrer" href="#" className="hover:underline dark:text-violet-600">Sign up</a>.
-                    </p>
-                </div>
-            </form>
+            <div className="space-y-1 text-sm">
+                <label htmlFor="email" className="block dark:text-gray-600">Email</label>
+                <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-sky-950"
+                
+                />
+            </div>
+            <div className="space-y-1 text-sm">
+                <label htmlFor="photo_url" className="block dark:text-gray-600">Photo Url</label>
+                <input type="text" name="photo_url" id="photo_url" placeholder="photo_url" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-sky-950" />
+            </div>
+
+            <div className="space-y-1 text-sm relative">
+                <label htmlFor="password" className="block dark:text-gray-600">Password</label>
+                <input name="password" id="password" placeholder="Password" className="w-full px-4 py-2 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-[#1E0342]"/>
+            </div>
+            <button className="block w-full p-3 text-center  dark:text-black font-semibold rounded-md dark:bg-[#9AC8CD]">Register
+            </button>
+        </form>
+        <div className="flex items-center pt-4 space-x-1">
+            <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
+            <p className="px-3 text-sm dark:text-gray-600">Register with social accounts</p>
+            <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
         </div>
+        <p className="text-xs text-center sm:px-6 dark:text-gray-600">If you have an accout?
+            <a rel="noopener noreferrer" href="/login" className="underline dark:text-gray-800">Log In</a>
+        </p>
+    </div>
     );
 };
 
