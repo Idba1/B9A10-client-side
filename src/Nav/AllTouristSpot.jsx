@@ -21,6 +21,7 @@ const AllTouristSpot = () => {
                 }
             </div>
             <Link className="btn" to={'/addspot'} >Add a New Spot</Link>
+            
         </div>
     );
 };
