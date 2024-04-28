@@ -29,6 +29,7 @@ import LogIn from './Components/LogIn';
 import Page from './Nav/Page';
 import Ticket from './Pages/Ticket';
 import SpotViewDetails from './Cared/SpotViewDetails';
+import AddTouristSpotSection from './Pages/AddTouristSpotSection';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/alltouristspotsection",
+        element: <AddTouristSpotSection></AddTouristSpotSection>
       },
       {
         path: "/countries",

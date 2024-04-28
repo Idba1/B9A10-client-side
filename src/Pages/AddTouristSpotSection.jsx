@@ -1,9 +1,8 @@
 import Swal from "sweetalert2";
-import SmallCarosel from "../Pages/SmallCarosel";
 
-const AddSpot = () => {
+const AddTouristSpotSection = () => {
 
-	const handleAddSpot = event => {
+    const handleTouristSpot = event => {
 		event.preventDefault();
 		const form = event.target;
 
@@ -19,17 +18,17 @@ const AddSpot = () => {
 		const email = form.email.value;
 		const name = form.name.value;
 
-		const addSpot = { image, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name };
+		const TouristSpot = { image, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name };
 
-		console.log(addSpot);
+		console.log(TouristSpot);
 
 		// Send Data
-		fetch('http://localhost:5000/addspot', {
+		fetch('http://localhost:5000/alltouristspotsection', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
 			},
-			body: JSON.stringify(addSpot)
+			body: JSON.stringify(TouristSpot)
 		})
 			.then(res => res.json())
 			.then(data => {
@@ -37,7 +36,7 @@ const AddSpot = () => {
 				if (data.insertedId) {
 					Swal.fire({
 						title: 'Success!',
-						text: 'Your Tourist Spot Added Successfully',
+						text: 'Success',
 						icon: 'success',
 						confirmButtonText: 'Cool'
 					})
@@ -46,13 +45,10 @@ const AddSpot = () => {
 
 	}
 
-
-	return (
-		<div>
-			<SmallCarosel></SmallCarosel>
-
-			<section className="p-6 dark:bg-gray-100 dark:text-gray-900">
-				<form onSubmit={handleAddSpot} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
+    return (
+        <div>
+            <section className="p-6 dark:bg-gray-100 dark:text-gray-900">
+				<form onSubmit={handleTouristSpot} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
 					<fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-blue-100">
 						<div className="space-y-2 col-span-full lg:col-span-1">
 							<p className="font-medium">Personal Inormation</p>
@@ -111,8 +107,8 @@ const AddSpot = () => {
 
 				</form>
 			</section>
-		</div>
-	);
+        </div>
+    );
 };
 
-export default AddSpot;
+export default AddTouristSpotSection;
