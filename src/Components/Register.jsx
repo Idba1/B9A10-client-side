@@ -9,6 +9,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 const Register = () => {
     const { createUser } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
+    const Successfully = () => toast('Register Successful!');
 
     const {
         register,
@@ -38,7 +39,7 @@ const Register = () => {
     };
 
     const onSubmit = (data) => {
-        const { email, password} = data;
+        const { email, password } = data;
 
 
         const passwordValidation = validatePassword(password);
@@ -93,17 +94,17 @@ const Register = () => {
                     <input type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Password" className="w-full px-4 py-2 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-[#1E0342]"
                         {...register("password", { required: true })}
                     />
-                     <span className="absolute top-7 right-2" onClick={() => setShowPassword(!showPassword)}>
-                            {
-                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
-                            }
-                        </span>
-                        {errors.password && (
-                            <span className="text-red-500">This field is required</span>
-                        )}
+                    <span className="absolute top-7 right-2" onClick={() => setShowPassword(!showPassword)}>
+                        {
+                            showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                        }
+                    </span>
+                    {errors.password && (
+                        <span className="text-red-500">This field is required</span>
+                    )}
                 </div>
-                <button className="block w-full p-3 text-center  dark:text-black font-semibold rounded-md dark:bg-[#9AC8CD]">Register
-                    <Toaster></Toaster>
+                <button onClick={Successfully} className="block w-full p-3 text-center  dark:text-black font-semibold rounded-md dark:bg-[#9AC8CD]">Register
+                    <Toaster> </Toaster>
                 </button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
