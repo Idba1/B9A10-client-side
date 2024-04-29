@@ -98,7 +98,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/myadd",
-        element: <MyAdd></MyAdd>,
+        element: <ProtectedRoute>
+          <MyAdd></MyAdd>
+        </ProtectedRoute>,
       },
       {
         path: "/page",
