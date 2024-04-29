@@ -164,12 +164,12 @@ const Navbar = () => {
                             user ? <div className="dropdown dropdown-end">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
-                                        <img src={user?.photoURL || "https://ibb.co/HGqYC8M"} />
+                                        <img src={user?.photoURL || "https://i.postimg.cc/6QKY96CQ/download-2.jpg"} />
                                     </div>
                                 </label>
                                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                     <li>
-                                        <button className="btn btn-sm  btn-ghost">{user?.displayName || 'user name not found'}</button>
+                                        <button className="btn btn-sm  btn-ghost">{user?.displayName || 'traveler'}</button>
 
                                     </li>
                                     <li>
@@ -183,7 +183,7 @@ const Navbar = () => {
                                 :
                                 <NavLink className="btn text-white  lg:font-bold bg-[#0E46A3]" to={"/login"}>LogIn</NavLink>
                         }
-                        <NavLink className="btn font-light text-xs p-1 lg:p-4 my-0 py-0  text-white  lg:font-bold lg:text-sm  bg-[#0E46A3]" to={"/register"}>Register</NavLink>
+                        {/* <NavLink className="btn font-light text-xs p-1 lg:p-4 my-0 py-0  text-white  lg:font-bold lg:text-sm  bg-[#0E46A3]" to={"/register"}>Register</NavLink> */}
                     </div>
                 </div>
                 <label className="cursor-pointer grid place-items-center">

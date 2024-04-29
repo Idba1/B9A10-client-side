@@ -10,7 +10,7 @@ const TouristSpotSection = () => {
            
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
-                    spots.map(spot => <TouristSpotSectionCardDesign
+                    spots?.map(spot => <TouristSpotSectionCardDesign
                         key={spot._id}
                         spot={spot}
                         spots={spots}

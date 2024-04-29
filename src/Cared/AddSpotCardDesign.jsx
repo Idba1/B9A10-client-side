@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const AddSpotCardDesign = ({spot}) => {
-    const { _id, image, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name } = spot;
+    const { image, tourists_spot_name, short_description, } = spot;
 
     return (
         <div>

@@ -33,6 +33,7 @@ import AddTouristSpotSection from './Pages/AddTouristSpotSection';
 import TouristSpotSection from './Nav/TouristSpotSection';
 import AuthProvider from './Components/AuthProvider';
 import ProtectedRoute from './Components/ProtectedRoute';
+import Check from './Pages/Check';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -134,6 +135,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LogIn></LogIn>,
+      },
+      {
+        path: "/check",
+        element: <Check></Check>,
       },
     ]
   },
