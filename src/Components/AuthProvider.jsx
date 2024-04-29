@@ -1,4 +1,4 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, } from 'firebase/auth';
 import PropTypes from 'prop-types'
 import { createContext, useEffect, useState } from 'react';
 import auth from '../Firebase/Firebase.init';
@@ -38,6 +38,13 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, githubProvider);
     };
 
+
+     //logout
+     const logout = () => {
+        setUser(null);
+        signOut(auth);
+    };
+
     // ovserver
     useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -50,7 +57,7 @@ const AuthProvider = ({ children }) => {
 
 
     const allvalues = {
-        createUser,signInUser,googleLogin,githubLogin, user, loading
+        createUser,signInUser,googleLogin,githubLogin, user, loading,logout
 
     };
 

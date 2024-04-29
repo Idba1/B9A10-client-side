@@ -1,7 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
+import { AuthContext } from './AuthProvider';
 
 const Navbar = () => {
+
+    const { logout, user } = useContext(AuthContext);
+    console.log(user);
     // const [countriesHover, setCountriesHover] = useState(false);
     const [pages, setpages] = useState(false);
 
@@ -153,8 +157,34 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-1 lg:gap-3 md:gap-3">
-                    <NavLink className="btn font-light text-xs p-1 lg:p-4 my-0 py-0  text-white  lg:font-bold lg:text-sm  bg-[#0E46A3]" to={"/register"}>Register</NavLink>
-                    <NavLink className="btn font-light text-xs p-1 lg:p-4 my-0 py-0 text-white  lg:font-bold  lg:text-sm bg-[#0E46A3]" to={"/login"}>LogIn</NavLink>
+
+                    <div>
+
+                        {
+                            user ? <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={user?.photoURL || "https://ibb.co/HGqYC8M"} />
+                                    </div>
+                                </label>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                    <li>
+                                        <button className="btn btn-sm  btn-ghost">{user?.displayName || 'user name not found'}</button>
+
+                                    </li>
+                                    <li>
+                                        <button
+                                            onClick={logout}
+                                            className="btn btn-sm  btn-ghost">Logout</button>
+
+                                    </li>
+                                </ul>
+                            </div>
+                                :
+                                <NavLink className="btn text-white  lg:font-bold bg-[#0E46A3]" to={"/login"}>LogIn</NavLink>
+                        }
+                        <NavLink className="btn font-light text-xs p-1 lg:p-4 my-0 py-0  text-white  lg:font-bold lg:text-sm  bg-[#0E46A3]" to={"/register"}>Register</NavLink>
+                    </div>
                 </div>
                 <label className="cursor-pointer grid place-items-center">
                     <input type="checkbox" onChange={handleTheme} value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
