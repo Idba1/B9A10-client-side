@@ -44,7 +44,7 @@ const AuthProvider = ({ children }) => {
 
 
     const allvalues = {
-        createUser,signInUser,googleLogin,githubLogin
+        createUser,signInUser,googleLogin,githubLogin, user
 
     };
 
