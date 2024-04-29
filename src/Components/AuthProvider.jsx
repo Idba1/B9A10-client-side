@@ -8,28 +8,33 @@ export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
     console.log(user);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
     // create user
     const createUser = (email, password) => {
+         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
 
       // sign in user
       const signInUser = (email, password) => {
+         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     };
 
     // google
     const googleLogin = () => {
+         setLoading(true);
         return signInWithPopup(auth, googleProvider);
     };
 
     // github
     const githubLogin = () => {
+         setLoading(true);
         return signInWithPopup(auth, githubProvider);
     };
 
@@ -38,13 +43,14 @@ const AuthProvider = ({ children }) => {
     onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
+                setLoading(false);
             }
         });
     }, []);
 
 
     const allvalues = {
-        createUser,signInUser,googleLogin,githubLogin, user
+        createUser,signInUser,googleLogin,githubLogin, user, loading
 
     };
 

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import { useForm } from "react-hook-form";
 import SocialLogIn from "./SocialLogIn";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const LogIn = () => {
     const { signInUser } = useContext(AuthContext)
@@ -12,13 +13,20 @@ const LogIn = () => {
         formState: { errors },
     } = useForm();
 
+    // navigation systems
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || "/";
+
     const onSubmit = (data) => {
         const { email, password } = data;
 
 
         signInUser(email, password)
-            .then((result) => {
-                console.log(result);
+            .then(result => {
+                if (result.user) {
+                    navigate(from);
+                }
             });
     };
 
