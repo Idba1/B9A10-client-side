@@ -9,7 +9,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 const Register = () => {
     const { createUser } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
-    const Successfully = () => toast('Register Successful!');
+    // const Successfully = () => toast('Register Successful!');
 
     const {
         register,
@@ -103,10 +103,10 @@ const Register = () => {
                         <span className="text-red-500">This field is required</span>
                     )}
                 </div>
-                <button onClick={Successfully} className="block w-full p-3 text-center  dark:text-black font-semibold rounded-md dark:bg-[#9AC8CD]">Register
+                <button className="block w-full p-3 text-center  dark:text-black font-semibold rounded-md dark:bg-[#9AC8CD]">Register
                     <Toaster> </Toaster>
                 </button>
-            </form>
+            </form >
             <div className="flex items-center pt-4 space-x-1">
                 <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
                 <p className="px-3 text-sm dark:text-gray-600">Register with social accounts</p>

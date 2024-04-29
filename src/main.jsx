@@ -94,7 +94,9 @@ const router = createBrowserRouter([
       },
       {
         path: `allviewdetails`,
-        element: <SpotViewDetails></SpotViewDetails>,
+        element: <ProtectedRoute>
+          <SpotViewDetails></SpotViewDetails>
+        </ProtectedRoute>,
       },
       {
         path: "/myadd",

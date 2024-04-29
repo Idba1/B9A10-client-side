@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { AuthContext } from './AuthProvider';
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
 
@@ -166,24 +168,31 @@ const Navbar = () => {
                     <div className='flex'>
 
                         {
-                            user ? <div className="dropdown dropdown-end">
-                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full">
-                                        <img src={user?.photoURL || "https://i.postimg.cc/6QKY96CQ/download-2.jpg"} />
+                            user ? <div>
+                                <a id="clickable">
+                                    <div className="dropdown dropdown-end">
+                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                            <div className="w-10 rounded-full">
+                                                <img src={user?.photoURL || "https://i.postimg.cc/6QKY96CQ/download-2.jpg"} />
+                                            </div>
+                                        </label>
+                                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                            <li>
+                                                <button className="btn btn-sm  btn-ghost">{user?.displayName || 'traveler'}</button>
+
+                                            </li>
+                                            <li>
+                                                <button
+                                                    onClick={logout}
+                                                    className="btn btn-sm  btn-ghost">Logout</button>
+
+                                            </li>
+                                        </ul>
                                     </div>
-                                </label>
-                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li>
-                                        <button className="btn btn-sm  btn-ghost">{user?.displayName || 'traveler'}</button>
-
-                                    </li>
-                                    <li>
-                                        <button
-                                            onClick={logout}
-                                            className="btn btn-sm  btn-ghost">Logout</button>
-
-                                    </li>
-                                </ul>
+                                </a>
+                                <Tooltip anchorSelect="#clickable" clickable>
+                                    <button>{user?.displayName || 'traveler'}</button>
+                                </Tooltip>
                             </div>
                                 :
                                 <NavLink className="btn text-white  lg:font-bold bg-[#0E46A3]" to={"/login"}>LogIn</NavLink>
@@ -191,10 +200,10 @@ const Navbar = () => {
                         {
                             user ? <div>
                                 <NavLink className="btn hidden text-white  lg:font-bold bg-[#0E46A3]" to={"/register"}>Register</NavLink>
-                                </div>:
-                            <div>
-                                <NavLink className="btn text-white visible lg:font-bold bg-[#0E46A3]" to={"/register"}>Register</NavLink>
-                            </div>
+                            </div> :
+                                <div>
+                                    <NavLink className="btn text-white visible lg:font-bold bg-[#0E46A3]" to={"/register"}>Register</NavLink>
+                                </div>
                         }
 
                     </div>
@@ -202,6 +211,7 @@ const Navbar = () => {
                 </div>
 
             </div>
+
         </div >
     );
 };
