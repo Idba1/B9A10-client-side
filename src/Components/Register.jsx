@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+    const [showPassword, setShowPassword] = useState(false);
 
     const {
         register,
@@ -88,12 +90,17 @@ const Register = () => {
 
                 <div className="space-y-1 text-sm relative">
                     <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                    <input name="password" id="password" placeholder="Password" className="w-full px-4 py-2 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-[#1E0342]"
+                    <input type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Password" className="w-full px-4 py-2 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-[#1E0342]"
                         {...register("password", { required: true })}
                     />
-                    {errors.password && (
-                        <span className="text-red-500">This field is required</span>
-                    )}
+                     <span className="absolute top-7 right-2" onClick={() => setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                            }
+                        </span>
+                        {errors.password && (
+                            <span className="text-red-500">This field is required</span>
+                        )}
                 </div>
                 <button className="block w-full p-3 text-center  dark:text-black font-semibold rounded-md dark:bg-[#9AC8CD]">Register
                     <Toaster></Toaster>
