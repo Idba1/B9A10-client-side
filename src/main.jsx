@@ -35,6 +35,7 @@ import AuthProvider from './Components/AuthProvider';
 import ProtectedRoute from './Components/ProtectedRoute';
 import Check from './Pages/Check';
 import Update from './Components/Update';
+import Details from './Cared/Details';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -97,6 +98,12 @@ const router = createBrowserRouter([
         path: `allviewdetails/:id`,
         element: <ProtectedRoute>
           <SpotViewDetails></SpotViewDetails>
+        </ProtectedRoute>,
+      },
+      {
+        path: `/details/:id`,
+        element: <ProtectedRoute>
+          <Details></Details>
         </ProtectedRoute>,
       },
       {
