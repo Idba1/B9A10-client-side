@@ -1,8 +1,12 @@
-# React + Vite
+Euro Journey - Explore Europe's Top Tourist Spots
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Site URL: https://euro-journey.web.app/
 
-Currently, two official plugins are available:
+Features:
+- Explore iconic landmarks like the Eiffel Tower, Colosseum, and Sagrada Familia.
+- Discover hidden gems in charming European towns and villages.
+- Plan your itinerary with detailed information on average cost, seasonality, and travel time.
+- Share your travel experiences and recommendations with fellow explorers.
+- Stay updated with the latest travel news and tips for a memorable Euro journey.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Category: Tourism Management website
