@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Components/AuthProvider";
+import { Link } from "react-router-dom";
 
 const MyAdd = () => {
 
@@ -10,7 +11,7 @@ const MyAdd = () => {
     const [Spot, setSpot] = useState([]);
     // console.log(user);
     useEffect(() => {
-      fetch(`https://euro-journey.vercel.app/addspot/${user?.email}`)
+      fetch(`https://euro-journey.vercel.app/myadd/${user?.email}`)
         .then((res) => res.json())
         .then((data) => {
           setSpot(data);
@@ -34,7 +35,7 @@ const MyAdd = () => {
                     <h2 className="card-title">New movie is released!</h2>
                     <p>Click the button to watch on Jetflix app.</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Update</button>
+                    <Link className="btn btn-primary" to={'/update'}>Update</Link>
                         <button className="btn btn-primary">Deleted</button>
                     </div>
                 </div>

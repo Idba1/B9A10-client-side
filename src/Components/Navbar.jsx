@@ -78,6 +78,8 @@ const Navbar = () => {
                                 </ul>
                             </li> */}
                             <NavLink className={({ isActive }) =>
+                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"//touristspotsection"}>Countries</NavLink>
+                            <NavLink className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
                             <NavLink className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/addspot"}>ADD SPOT</NavLink>
@@ -131,6 +133,8 @@ const Navbar = () => {
                                 </NavLink></li>
                             </ul>
                         </li> */}
+                        <NavLink className={({ isActive }) =>
+                            isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/touristspotsection"}>Country</NavLink>
                         <NavLink className={({ isActive }) =>
                             isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
                         <NavLink className={({ isActive }) =>

@@ -34,6 +34,7 @@ import TouristSpotSection from './Nav/TouristSpotSection';
 import AuthProvider from './Components/AuthProvider';
 import ProtectedRoute from './Components/ProtectedRoute';
 import Check from './Pages/Check';
+import Update from './Components/Update';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -143,6 +144,10 @@ const router = createBrowserRouter([
       {
         path: "/check",
         element: <Check></Check>,
+      },
+      {
+        path: "/update",
+        element: <Update></Update>,
       },
     ]
   },

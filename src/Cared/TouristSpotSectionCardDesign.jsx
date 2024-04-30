@@ -10,7 +10,7 @@ const TouristSpotSectionCardDesign = ({spot}) => {
                     <h2 className="card-title">  {tourists_spot_name} </h2>
                     <p> {short_description} </p>
                     <div className="card-actions justify-end">
-                        <Link to={`/viewdetails`} className="btn btn-primary">View Details</Link>
+                        <Link to={`/allviewdetails/${_id}`} className="btn btn-primary">View Details</Link>
                     </div>
                 </div>
             </div>

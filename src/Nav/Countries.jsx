@@ -1,8 +1,9 @@
+import TouristSpotSection from "./TouristSpotSection";
 
 const Countries = () => {
     return (
         <div>
-            <h1>Countries</h1>
+            <TouristSpotSection></TouristSpotSection>
         </div>
     );
 };
