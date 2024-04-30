@@ -93,7 +93,7 @@ const router = createBrowserRouter([
         </ProtectedRoute>,
       },
       {
-        path: `allviewdetails`,
+        path: `allviewdetails/:id`,
         element: <ProtectedRoute>
           <SpotViewDetails></SpotViewDetails>
         </ProtectedRoute>,
