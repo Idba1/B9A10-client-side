@@ -1,24 +1,26 @@
-import SmallCarosel from "../Pages/SmallCarosel";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../Components/AuthProvider";
 
 const MyAdd = () => {
 
+	const { user } = useContext(AuthContext) || {};
+    console.log(user);
 
-    // const { user } = useAuth() || {};
-    // const [item, setItem] = useState([]);
-    // // console.log(user);
-    // useEffect(() => {
-    //   fetch(`https://euro-journey.vercel.app/myProduct/${user?.email}`)
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       setItem(data);
-    //     });
-    // }, [user]);
+
+    const [item, setItem] = useState([]);
+    // console.log(user);
+    useEffect(() => {
+      fetch(`https://euro-journey.vercel.app/addspot/${user?.email}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setItem(data);
+        });
+    }, [user]);
 
 
 
     return (
         <div>
-            <SmallCarosel></SmallCarosel>
 
             <div className="text-center mb-10 mt-8 lg:mt-12 p-5">
                 <h1 className="text-2xl  text-sky-950 font-bold mt-2">Touch With Euro Journey</h1>

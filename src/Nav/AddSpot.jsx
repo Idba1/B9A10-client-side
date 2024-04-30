@@ -1,12 +1,16 @@
 import Swal from "sweetalert2";
 import SmallCarosel from "../Pages/SmallCarosel";
+import { useContext } from "react";
+import { AuthContext } from "../Components/AuthProvider";
 
 const AddSpot = () => {
+	const { user } = useContext(AuthContext)
+
 
 	const handleAddSpot = event => {
 		event.preventDefault();
 		const form = event.target;
-
+		const userEmail = user.email;
 		const image = form.image.value;
 		const tourists_spot_name = form.tourists_spot_name.value;
 		const country_Name = form.country_Name.value;
@@ -19,7 +23,7 @@ const AddSpot = () => {
 		const email = form.email.value;
 		const name = form.name.value;
 
-		const addSpot = { image, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name };
+		const addSpot = {userEmail, image, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totaVisitorsPerYear, email, name };
 
 		console.log(addSpot);
 
