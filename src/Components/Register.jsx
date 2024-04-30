@@ -54,7 +54,7 @@ const Register = () => {
                 navigate(from);
                 const createdAt = result.user?.metadata?.creationTime;
                 const user = { email, createdAt: createdAt };
-                fetch('https://euro-journey-ltsfeaw8a-idba-islams-projects.vercel.app/user', {
+                fetch('https://euro-journey.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -23,7 +23,7 @@ const AddTouristSpotSection = () => {
 		console.log(TouristSpot);
 
 		// Send Data
-		fetch('https://euro-journey-ltsfeaw8a-idba-islams-projects.vercel.app/alltouristspotsection', {
+		fetch('https://euro-journey.vercel.app/alltouristspotsection', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
