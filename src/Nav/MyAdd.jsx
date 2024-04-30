@@ -7,13 +7,13 @@ const MyAdd = () => {
     console.log(user);
 
 
-    const [item, setItem] = useState([]);
+    const [Spot, setSpot] = useState([]);
     // console.log(user);
     useEffect(() => {
       fetch(`https://euro-journey.vercel.app/addspot/${user?.email}`)
         .then((res) => res.json())
         .then((data) => {
-          setItem(data);
+          setSpot(data);
         });
     }, [user]);
 

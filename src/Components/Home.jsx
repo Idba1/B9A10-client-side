@@ -9,6 +9,7 @@ const Home = () => {
     return (
         <div>
             <Slider></Slider>
+            
             <TouristSpotSection></TouristSpotSection>
             <Contact></Contact>
             <AboutUs></AboutUs>
