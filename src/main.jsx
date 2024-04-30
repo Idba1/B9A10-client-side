@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/touristspotsection",
-        loader: () => fetch('http://localhost:5000/alltouristspotsection'),
+        loader: () => fetch('https://euro-journey-ltsfeaw8a-idba-islams-projects.vercel.app/alltouristspotsection'),
         element: <TouristSpotSection></TouristSpotSection>,
       },
       {
@@ -83,7 +83,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/alltouristspot",
-        loader: () => fetch('http://localhost:5000/addspot'),
+        loader: () => fetch('https://euro-journey-ltsfeaw8a-idba-islams-projects.vercel.app/addspot'),
         element: <AllTouristSpot></AllTouristSpot>,
       },
       {

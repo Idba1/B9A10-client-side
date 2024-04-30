@@ -7,7 +7,7 @@ const MyAdd = () => {
     // const [item, setItem] = useState([]);
     // // console.log(user);
     // useEffect(() => {
-    //   fetch(`http://localhost:5000/myProduct/${user?.email}`)
+    //   fetch(`https://euro-journey-ltsfeaw8a-idba-islams-projects.vercel.app/myProduct/${user?.email}`)
     //     .then((res) => res.json())
     //     .then((data) => {
     //       setItem(data);

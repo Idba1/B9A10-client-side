@@ -24,7 +24,7 @@ const AddSpot = () => {
 		console.log(addSpot);
 
 		// Send Data
-		fetch('http://localhost:5000/addspot', {
+		fetch('https://euro-journey-ltsfeaw8a-idba-islams-projects.vercel.app/addspot', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
