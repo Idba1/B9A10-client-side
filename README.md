@@ -20,7 +20,7 @@ Euro Journey is a tourism management website that allows users to explore Europe
 - Tailwind CSS
 
 ## How to Run Locally
-1. Clone the repository: `git clone https://github.com/your-username/euro-journey.git`
+1. Clone the repository: `https://github.com/Idba1/B9A10-client-side.git`
 2. Navigate to the project directory: `cd euro-journey`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
