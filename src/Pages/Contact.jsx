@@ -3,13 +3,13 @@ const Contact = () => {
     return (
         <div className="mb-14">
 
-            <div className="relative w-full flex gap-4 py-6 overflow-x-auto">
+            {/* <div className="relative w-full flex gap-4 py-6 overflow-x-auto">
                 <img className="h-48 aspect-video rounded-sm object-cover object-center dark:bg-gray-500" src="https://i.postimg.cc/GhdLPy0Q/download-6.jpg" alt="Image 1" />
                 <img className="h-48 aspect-video rounded-sm object-cover object-center dark:bg-gray-500" src="https://i.postimg.cc/wMc686NL/images-1.jpg" alt="Image 2" />
                 <img className="h-48 aspect-video rounded-sm object-cover object-center dark:bg-gray-500" src="https://i.postimg.cc/XYDn01rH/download-4.jpg" alt="Image 3" />
                 <img className="h-48 aspect-video rounded-sm object-cover object-center dark:bg-gray-500" src="https://i.postimg.cc/J4x1pzMW/download-5.jpg" alt="Image 4" />
                 <img className="h-48 aspect-video rounded-sm object-cover object-center dark:bg-gray-500" src="https://i.postimg.cc/mZMky4Pb/download-7.jpg" alt="Image 5" />
-            </div>
+            </div> */}
 
             
 
