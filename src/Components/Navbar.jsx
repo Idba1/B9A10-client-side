@@ -77,15 +77,15 @@ const Navbar = () => {
                                     </NavLink></li>
                                 </ul>
                             </li> */}
-                            <NavLink className={({ isActive }) =>
-                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"//touristspotsection"}>Countries</NavLink>
+                            {/* <NavLink className={({ isActive }) =>
+                                isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"//touristspotsection"}>Countries</NavLink> */}
                             <NavLink className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
                             <NavLink className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/addspot"}>ADD SPOT</NavLink>
                             <NavLink className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={`/myadd/${user?.email}l`}>MY LIST</NavLink>
-                            <li className="dropdown">
+                            {/* <li className="dropdown">
                                 <span tabIndex={0} className={({ isActive }) =>
                                     isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white menu-title'} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>PAGES</span>
                                 <ul className={`menu ${pages ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>
@@ -103,7 +103,7 @@ const Navbar = () => {
                                         isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/ticket"}>Ticket</NavLink></li>
 
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-[#0E46A3] font-bold lg:text-2xl dark:text-sky-400">Euro Journey</a>
@@ -133,15 +133,15 @@ const Navbar = () => {
                                 </NavLink></li>
                             </ul>
                         </li> */}
-                        <NavLink className={({ isActive }) =>
-                            isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/touristspotsection"}>Country</NavLink>
+                        {/* <NavLink className={({ isActive }) =>
+                            isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/touristspotsection"}>Country</NavLink> */}
                         <NavLink className={({ isActive }) =>
                             isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/alltouristspot"}>ALL TOURIST SPOT</NavLink>
                         <NavLink className={({ isActive }) =>
                             isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/addspot"}>ADD SPOT</NavLink>
                         <NavLink className={({ isActive }) =>
                             isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={`/myadd/${user?.email}l`}>MY LIST</NavLink>
-                        <li className="dropdown">
+                        {/* <li className="dropdown">
                             <NavLink to={"/page"} tabIndex={0} className={({ isActive }) =>
                                 isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white menu-title'} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>PAGES</NavLink>
                             <ul className={`menu ${pages ? 'block' : 'hidden'} absolute top-full left-0 mt-2 bg-base-100 rounded shadow-lg w-52`} onMouseEnter={handleMousePagesEnter} onMouseLeave={handleMousePagesLeave}>
@@ -159,7 +159,7 @@ const Navbar = () => {
                                     isActive ? 'text-[#FFD700]' : theme === 'light' ? 'text-[#004A7F]' : 'text-white'} to={"/ticket"}>Ticket</NavLink></li>
 
                             </ul>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className="navbar-end gap-1 lg:gap-3 md:gap-3">
