@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 const MyAdd = () => {
 
-	const { user } = useContext(AuthContext) || {};
+    const { user } = useContext(AuthContext) || {};
     console.log(user);
 
 
     const [Spot, setSpot] = useState([]);
-    // console.log(user);
+    console.log(Spot);
     useEffect(() => {
-      fetch(`https://euro-journey.vercel.app/myadd/${user?.email}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setSpot(data);
-        });
+        fetch(`https://euro-journey.vercel.app/addspot/`)
+            .then((res) => res.json())
+            .then((data) => {
+                setSpot(data);
+            });
     }, [user]);
 
 
@@ -29,21 +29,35 @@ const MyAdd = () => {
             </div>
 
 
-            <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">New movie is released!</h2>
-                    <p>Click the button to watch on Jetflix app.</p>
-                    <div className="card-actions justify-end">
-                    <Link className="btn btn-primary" to={'/update'}>Update</Link>
-                        <button className="btn btn-primary">Deleted</button>
+            <div className='px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-9'>
+                {Spot.map((ssopt) => (
+                    <div key={ssopt._id} className="card-side bg-base-100 shadow-xl">
+                        <figure><img className="h-60 w-full" src={ssopt.image} alt="Movie" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">country_Name</h2>
+                            <div className="flex justify-between">
+                                <span>{ssopt.average_cost}</span>
+                                <span>{ssopt.totaVisitorsPerYear}</span>
+                            </div>
+                            <div className="flex justify-between">
+                                <span>{ssopt.tourists_spot_name}</span>
+                                <span>{ssopt.seasonality}</span>
+                            </div>
+                            <p>{ssopt.short_description}</p>
+                            <div className="card-actions justify-end">
+                                <Link className="btn btn-primary" to={'/update'}>Update</Link>
+                                <button className="btn btn-primary">Deleted</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                ))}
+
+
+
+
+
+
             </div>
-
-
-
-
         </div>
     );
 };
