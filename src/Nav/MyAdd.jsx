@@ -11,12 +11,12 @@ const MyAdd = () => {
     const [Spot, setSpot] = useState([]);
     console.log(Spot);
     useEffect(() => {
-        fetch(`https://euro-journey.vercel.app/myadd/${Spot.userEmail}`)
+        fetch(`https://euro-journey.vercel.app/addspot/${user.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setSpot(data);
             });
-    }, [Spot.userEmail]);
+    }, [user.email]);
 
 
 
@@ -51,12 +51,6 @@ const MyAdd = () => {
                         </div>
                     </div>
                 ))}
-
-
-
-
-
-
             </div>
         </div>
     );
