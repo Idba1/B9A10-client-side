@@ -1,21 +1,24 @@
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 const TouristSpotSctionStatic = () => {
     return (
         <div>
             <section className="dark:bg-gray-50 dark:text-gray-800">
                 <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
                     <div>
-                        <h2 className="text-2xl font-bold tracking-tight text-center sm:text-3xl dark:text-gray-900">Discover Iconic Landmarks and Scenic Wonders</h2>
-                        <p className="max-w-2xl mx-auto mt-4 text-xl text-center dark:text-gray-600">Explore some of the world's most renowned tourist attractions and breathtaking natural sites.</p>
+                        <h2 className="text-2xl font-bold tracking-tight text-center sm:text-3xl text-[#4169E1]">Discover Iconic Landmarks and Scenic Wonders</h2>
+                        <p className="max-w-2xl mx-auto mt-4 text-xl text-center text-[#888888]">Explore some of the world's most renowned tourist attractions and breathtaking natural sites.</p>
                     </div>
                     <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                         <div>
-                            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-900">Explore Eiffel Tower, Colosseum, Sagrada Familia</h3>
-                            <p className="mt-3 text-lg dark:text-gray-600">Our curated selection features six must-visit destinations, each with its unique charm and historical significance.</p>
+                            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl text-[#333333]">Explore Eiffel Tower, Colosseum, Sagrada Familia</h3>
+                            <p className="mt-3 text-lg text-[#888888]">Our curated selection features six must-visit destinations, each with its unique charm and historical significance.</p>
                             <div className="mt-12 space-y-12">
                                 <div className="flex">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-[#4169E1] dark:text-gray-50">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
@@ -28,7 +31,7 @@ const TouristSpotSctionStatic = () => {
                                 </div>
                                 <div className="flex">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-[#4169E1] dark:text-gray-50">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
@@ -42,7 +45,7 @@ const TouristSpotSctionStatic = () => {
                                 </div>
                                 <div className="flex">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-[#4169E1] dark:text-gray-50">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
@@ -57,18 +60,18 @@ const TouristSpotSctionStatic = () => {
                             </div>
                         </div>
                         <div aria-hidden="true" className="mt-10 lg:mt-0">
-                            <img src="https://i.ibb.co/vmzj2pd/England-London-Big-Ben-500874-1600x1200.jpg" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+                            <img data-aos="flip-left" data-aos-duration="1200" src="https://i.ibb.co/vmzj2pd/England-London-Big-Ben-500874-1600x1200.jpg" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
                         </div>
                     </div>
                     <div>
                         <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                             <div className="lg:col-start-2">
-                                <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-900">Explore Big Ben, Keukenhof Gardens, Jungfrau Region</h3>
-                                <p className="mt-3 text-lg dark:text-gray-600"> From the architectural marvels of Europe to the vibrant floral displays and majestic mountain landscapes, these spots offer unforgettable experiences for travelers.</p>
+                                <h3 className="text-2xl font-bold tracking-tight sm:text-3xl text-[#333333]">Explore Big Ben, Keukenhof Gardens, Jungfrau Region</h3>
+                                <p className="mt-3 text-lg text-[#888888]"> From the architectural marvels of Europe to the vibrant floral displays and majestic mountain landscapes, these spots offer unforgettable experiences for travelers.</p>
                                 <div className="mt-12 space-y-12">
                                     <div className="flex">
                                         <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-[#4169E1] dark:text-gray-50">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
@@ -82,7 +85,7 @@ const TouristSpotSctionStatic = () => {
                                     </div>
                                     <div className="flex">
                                         <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-[#4169E1] dark:text-gray-50">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
@@ -96,7 +99,7 @@ const TouristSpotSctionStatic = () => {
                                     </div>
                                     <div className="flex">
                                         <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-[#4169E1] dark:text-gray-50">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
@@ -111,7 +114,7 @@ const TouristSpotSctionStatic = () => {
                                 </div>
                             </div>
                             <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-                                <img src="https://i.ibb.co/XkZG6Jt/leonard-cotte-R5scocn-OOd-M-unsplash.jpg" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+                                <img src="https://i.ibb.co/XkZG6Jt/leonard-cotte-R5scocn-OOd-M-unsplash.jpg" alt="" data-aos="flip-left" data-aos-duration="1200" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
                             </div>
                         </div>
                     </div>

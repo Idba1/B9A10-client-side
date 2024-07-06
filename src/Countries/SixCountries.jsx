@@ -90,8 +90,8 @@ const SixCountries = () => {
     return (
         <div className='my-10 md:my-14 lg:my-20'>
             <div className="">
-                <h2 className="text-2xl text-center font-semibold sm:text-4xl text-[#0077B5]">Let's Go With Euro Journey</h2>
-                <p className="mt-4 text-center mb-8 dark:text-sky-950"> Explore some of the world's most renowned <br /> tourist attractions and breathtaking natural sites. <br /></p>
+                <h2 className="text-2xl text-center font-semibold sm:text-4xl text-[#4169E1]">Let's Go With Euro Journey</h2>
+                <p className="mt-4 text-center mb-8 text-[#888888]"> Explore some of the world's most renowned <br /> tourist attractions and breathtaking natural sites. <br /></p>
             </div>
             <div className="overflow-hidden relative">
                 <div className="flex" ref={containerRef} style={{ minHeight: '100%', whiteSpace: 'nowrap', overflowX: 'hidden' }}>
@@ -108,7 +108,7 @@ const SixCountries = () => {
                                 style={{ backgroundImage: `url(${story.imageUrl})` }}
                             ></motion.div>
 
-                            <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-purple-800">
+                            <div className="w-56 -mt-10 overflow-hidden rounded-lg shadow-lg md:w-64 bg-[#4169E1]">
                                 <h3 className="py-2 font-bold tracking-wide text-center text-purple-800 uppercase dark:text-white">{story.name}</h3>
                                 <p className="px-3 py-2 text-center text-white dark:text-white">{` Let's Go With Euro Journey`}</p>
                             </div>

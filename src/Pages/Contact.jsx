@@ -14,14 +14,14 @@ const Contact = () => {
             
 
             <div className="text-center mb-10 mt-8 lg:mt-12 p-5">
-                <h1 className="text-2xl  text-sky-950 font-bold mt-2">Touch With Euro Journey</h1>
-                <p className="text-black content-center ">Elevate your communication experience with our exclusive contact page, <br /> designed for seamless interaction with our discerning clientele.</p>
+                <h1 className="text-2xl  text-[#4169E1] font-bold mt-2">Touch With Euro Journey</h1>
+                <p className="text-[#888888] content-center ">Elevate your communication experience with our exclusive contact page, <br /> designed for seamless interaction with our discerning clientele.</p>
             </div>
 
             <section className="py-6 dark:bg-gray-50 dark:text-gray-900">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                     <div className="py-6 md:py-0 md:px-6">
-                        <h1 className="text-4xl font-bold">Get in touch</h1>
+                        <h1 className="text-4xl text-yellow-600 font-bold">Get in touch</h1>
                         <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
                         <div className="space-y-4">
                             <p className="flex items-center">
@@ -48,17 +48,17 @@ const Contact = () => {
                     <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                         <label className="block">
                             <span className="mb-1">Full name</span>
-                            <input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
+                            <input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-yellow-600 dark:bg-gray-100" />
                         </label>
                         <label className="block">
                             <span className="mb-1">Email address</span>
-                            <input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
+                            <input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-yellow-600 dark:bg-gray-100" />
                         </label>
                         <label className="block">
                             <span className="mb-1">Message</span>
-                            <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
+                            <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-yellow-600 dark:bg-gray-100"></textarea>
                         </label>
-                        <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600">Submit</button>
+                        <button type="button" className="self-center px-8 py-3 text-lg rounded hover:cursor-zoom-in lg:font-bold bg-[#FFD700] text-[#333333] btn justify-end bottom-0 border-none hover:bg-[#FF7F50] hover:text-[#FFFFFF]" >Submit</button>
                     </form>
                 </div>
             </section>
