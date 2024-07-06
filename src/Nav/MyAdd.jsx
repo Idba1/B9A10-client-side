@@ -11,12 +11,12 @@ const MyAdd = () => {
     const [Spot, setSpot] = useState([]);
     console.log(Spot);
     useEffect(() => {
-        fetch(`https://euro-journey.vercel.app/addspot/`)
+        fetch(`https://euro-journey.vercel.app/myadd/${Spot.userEmail}`)
             .then((res) => res.json())
             .then((data) => {
                 setSpot(data);
             });
-    }, [user]);
+    }, [Spot.userEmail]);
 
 
 
@@ -34,7 +34,7 @@ const MyAdd = () => {
                     <div key={ssopt._id} className="card-side bg-base-100 shadow-xl">
                         <figure><img className="h-60 w-full" src={ssopt.image} alt="Movie" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">country_Name</h2>
+                            <h2 className="card-title">{ssopt.country_Name}</h2>
                             <div className="flex justify-between">
                                 <span>{ssopt.average_cost}</span>
                                 <span>{ssopt.totaVisitorsPerYear}</span>
