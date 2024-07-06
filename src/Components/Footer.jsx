@@ -25,10 +25,10 @@ const Footer = () => {
           <a className="link link-hover text-sm">Cookie policy</a>
         </nav>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+      <footer className="footer px-10 py-4 border-t bg-[#333333] text-[#FFFFFF] border-none">
         <aside className="items-center grid-flow-col">
           <img src="Logo.png" className="h-20 w-20" alt="" />
-          <p className="text-[#4169E1] font-bold text-lg">EURO JOURNEY <br /> <span className= "text-sm font-normal text-black">Providing reliable tour since 1992</span></p>
+          <p className="text-[#4169E1] font-bold text-lg">EURO JOURNEY <br /> <span className= "text-sm font-normal text-white">Providing reliable tour since 1992</span></p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">

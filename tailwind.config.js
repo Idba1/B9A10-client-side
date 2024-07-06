@@ -9,7 +9,18 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ['light', 'dark',],
+    theme: {
+      extend: {
+        colors: {
+          'royal-blue': '#4169E1',
+          'gold': '#FFD700',
+          'coral': '#FF7F50',
+          'charcoal': '#333333',
+          'gray-500': '#888888',
+          'sky-800': '#2C5282',
+        }
+      }
+    }
   },
 }
 
