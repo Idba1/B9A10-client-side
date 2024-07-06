@@ -2,7 +2,7 @@
 const TouristSpotSctionStatic = () => {
     return (
         <div>
-            <section className="dark:bg-gray-100 dark:text-gray-800">
+            <section className="dark:bg-gray-50 dark:text-gray-800">
                 <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
                     <div>
                         <h2 className="text-2xl font-bold tracking-tight text-center sm:text-3xl dark:text-gray-900">Discover Iconic Landmarks and Scenic Wonders</h2>
