@@ -27,7 +27,7 @@ const ASpot = () => {
 		console.log(aSpot);
 
 		// Send Data
-		fetch('https://euro-journey.vercel.app/aspot', {
+		fetch('https://euro-journey.vercel.app/addspot', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
