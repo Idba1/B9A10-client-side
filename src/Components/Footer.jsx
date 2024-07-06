@@ -5,30 +5,30 @@ const Footer = () => {
     <div>
       <footer className="footer p-10 bg-gray-50 text-base-content">
         <nav>
-          <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Italy</a>
-          <a className="link link-hover">France</a>
-          <a className="link link-hover">Spain</a>
-          <a className="link link-hover">England</a>
+          <h6 className="footer-title text-purple-700 text-lg">Services</h6>
+          <a className="link link-hover text-black text-sm">Italy</a>
+          <a className="link link-hover text-black text-sm">France</a>
+          <a className="link link-hover text-black text-sm">Spain</a>
+          <a className="link link-hover text-black text-sm">England</a>
         </nav>
         <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">Tour Guide</a>
-          <a className="link link-hover">Ticket</a>
-          <a className="link link-hover">Resort</a>
-          <a className="link link-hover">Safety</a>
+          <h6 className="footer-title text-purple-700 text-lg">Company</h6>
+          <a className="link link-hover text-black text-sm">Tour Guide</a>
+          <a className="link link-hover text-black text-sm">Ticket</a>
+          <a className="link link-hover text-black text-sm">Resort</a>
+          <a className="link link-hover text-black text-sm">Safety</a>
         </nav>
         <nav>
-          <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <h6 className="footer-title text-purple-700 text-lg">Legal</h6>
+          <a className="link link-hover text-black text-sm">Terms of use</a>
+          <a className="link link-hover text-black text-sm">Privacy policy</a>
+          <a className="link link-hover text-black text-sm">Cookie policy</a>
         </nav>
       </footer>
       <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
         <aside className="items-center grid-flow-col">
           <img src="Logo.png" className="h-20 w-20" alt="" />
-          <p>EURO JOURNEY <br />Providing reliable tour since 1992</p>
+          <p className="text-purple-700 text-lg">EURO JOURNEY <br /> <span className="text-black text-sm">Providing reliable tour since 1992</span></p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
