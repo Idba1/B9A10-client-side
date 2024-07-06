@@ -12,11 +12,11 @@ const Contact = () => {
             </div> */}
 
             
-
+{/* 
             <div className="text-center mb-10 mt-8 lg:mt-12 p-5">
                 <h1 className="text-2xl  text-sky-950 font-bold mt-2">Touch With Euro Journey</h1>
-                <p className="text-black content-center ">Elevate your communication experience with our exclusive contact page, <br /> designed for seamless interaction with our discerning clientele. Connect effortlessly for <br /> inquiries, assistance, or esteemed collaboration opportunities in the realm of luxury real estate.</p>
-            </div>
+                <p className="text-black content-center ">Elevate your communication experience with our exclusive contact page, <br /> designed for seamless interaction with our discerning clientele.</p>
+            </div> */}
 
             <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
