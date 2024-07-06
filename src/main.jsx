@@ -45,6 +45,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch('https://euro-journey.vercel.app/alltouristspotsection'),
       },
       {
         path: "/alltouristspotsection",
@@ -52,7 +53,6 @@ const router = createBrowserRouter([
       },
       {
         path: "/touristspotsection",
-        loader: () => fetch('https://euro-journey.vercel.app/alltouristspotsection'),
         element: <TouristSpotSection></TouristSpotSection>,
       },
       {
