@@ -199,7 +199,7 @@ const Navbar = () => {
                         }
                         {
                             user ? <div>
-                                <NavLink  className=" lg:font-bold bg-[#FFD700] text-[#333333] btn justify-end bottom-0 border-none hover:bg-[#FF7F50] hover:text-[#FFFFFF]" to={"/register"}>Register</NavLink>
+                                <NavLink  className=" lg:font-bold bg-[#FFD700] text-[#333333] hidden btn justify-end bottom-0 border-none hover:bg-[#FF7F50] hover:text-[#FFFFFF]" to={"/register"}>Register</NavLink>
                             </div> :
                                 <div>
                                     <NavLink className="ml-2 visible lg:font-bold bg-[#FFD700] text-[#333333] btn justify-end bottom-0 border-none hover:bg-[#FF7F50] hover:text-[#FFFFFF]" to={"/register"}>Register</NavLink>
