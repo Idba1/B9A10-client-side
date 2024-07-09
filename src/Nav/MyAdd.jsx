@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Components/AuthProvider";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -40,7 +40,7 @@ const MyAdd = () => {
                     icon: "success"
                 });
 
-                // Refresh your data
+                // Refresh data
                 setSpot((prevSpots) => prevSpots.filter((spot) => spot._id !== id));
             }
         } catch (err) {
@@ -79,7 +79,7 @@ const MyAdd = () => {
                             </div>
                             <p>{ssopt.short_description}</p>
                             <div className="card-actions justify-end">
-                                <Link className="btn btn-primary" to={'/update'}>Update</Link>
+                                {/* <Link className="btn btn-primary" to={'/update'}>Update</Link> */}
                                 <button onClick={() => handleDelete(ssopt._id)} className="btn btn-primary">Delete</button>
                             </div>
                         </div>
