@@ -32,7 +32,7 @@ import SpotViewDetails from './Cared/SpotViewDetails';
 import AddTouristSpotSection from './Pages/AddTouristSpotSection';
 import TouristSpotSection from './Nav/TouristSpotSection';
 import AuthProvider from './Components/AuthProvider';
-import ProtectedRoute from './Components/ProtectedRoute';
+// import ProtectedRoute from './Components/ProtectedRoute';
 import Check from './Pages/Check';
 import Update from './Components/Update';
 import Details from './Cared/Details';
@@ -90,29 +90,29 @@ const router = createBrowserRouter([
       },
       {
         path: "/addspot",
-        element: <ProtectedRoute>
+        element:
           <AddSpot></AddSpot>
-        </ProtectedRoute>,
+        ,
       },
       {
         path: `allviewdetails/:id`,
-        element: <ProtectedRoute>
+        element:
           <SpotViewDetails></SpotViewDetails>
-        </ProtectedRoute>,
+        ,
       },
       {
         path: `/details/:id`,
-        element: <ProtectedRoute>
+        element:
           <Details></Details>
-        </ProtectedRoute>,
+        ,
       },
       {
         path: "/myadd/:userEmail",
-        element: <ProtectedRoute>
+        element:
           <MyAdd></MyAdd>
-        </ProtectedRoute>,
+        ,
       },
-    
+
       {
         path: "/page",
         element: <Page></Page>,
