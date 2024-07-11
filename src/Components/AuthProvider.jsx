@@ -1,76 +1,87 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, } from 'firebase/auth';
-import PropTypes from 'prop-types'
+import { 
+    GithubAuthProvider, 
+    GoogleAuthProvider, 
+    createUserWithEmailAndPassword, 
+    onAuthStateChanged, 
+    signInWithEmailAndPassword, 
+    signInWithPopup, 
+    signOut 
+} from 'firebase/auth';
+import PropTypes from 'prop-types';
 import { createContext, useEffect, useState } from 'react';
 import auth from '../Firebase/Firebase.init';
-export const AuthContext = createContext(null)
 
+export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
-
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     console.log(user);
+    
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
-    // create user
+    // Create user
     const createUser = (email, password) => {
-         setLoading(true);
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
-
-      // sign in user
-      const signInUser = (email, password) => {
-         setLoading(true);
+    // Sign in user
+    const signInUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     };
 
-    // google
+    // Google login
     const googleLogin = () => {
-         setLoading(true);
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     };
 
-    // github
+    // GitHub login
     const githubLogin = () => {
-         setLoading(true);
+        setLoading(true);
         return signInWithPopup(auth, githubProvider);
     };
 
-
-     //logout
-     const logout = () => {
-        setUser(null);
-        signOut(auth);
+    // Logout
+    const logout = () => {
+        setLoading(true);
+        return signOut(auth).then(() => {
+            setUser(null);
+            setLoading(false);
+        });
     };
 
-    // ovserver
+    // Observer
     useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUser(user);
-                setLoading(false);
-            }
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setUser(user);
+            setLoading(false);
         });
+        return () => unsubscribe();
     }, []);
 
-
     const allvalues = {
-        createUser,signInUser,googleLogin,githubLogin, user, loading,logout
-
+        createUser,
+        signInUser,
+        googleLogin,
+        githubLogin,
+        user,
+        loading,
+        logout
     };
 
     return (
-        <div>
-            <AuthContext.Provider value={allvalues}>
-                {children}
-            </AuthContext.Provider>
-        </div>
+        <AuthContext.Provider value={allvalues}>
+            {children}
+        </AuthContext.Provider>
     );
 };
+
 AuthProvider.propTypes = {
-    children: PropTypes.object.isRequired,
-}
+    children: PropTypes.node.isRequired,
+};
 
 export default AuthProvider;

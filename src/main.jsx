@@ -36,6 +36,7 @@ import AuthProvider from './Components/AuthProvider';
 import Check from './Pages/Check';
 import Update from './Components/Update';
 import Details from './Cared/Details';
+import ProtectedRoute from './Components/ProtectedRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -91,7 +92,9 @@ const router = createBrowserRouter([
       {
         path: "/addspot",
         element:
-          <AddSpot></AddSpot>
+          <ProtectedRoute>
+            <AddSpot></AddSpot>
+          </ProtectedRoute>
         ,
       },
       {
